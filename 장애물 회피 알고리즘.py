@@ -100,7 +100,6 @@ def avoid_obstacle():
     t.fd(move_distance)
     print(f"{move_distance}픽셀 이동 완료")
     
-    if t.pos() == (325, 275):
         
     
 #도착점까지 전진하는 루프
