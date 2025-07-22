@@ -7,6 +7,7 @@ t = turtle.Turtle()
 t.color("skyblue")
 t.shape("turtle")
 t.shapesize(1.5,1.5,1.5)
+t.lt(60)
 
 #시작 점 그리기
 t.penup()
@@ -97,4 +98,15 @@ def avoid_obstacle():
     move_distance = random.randint(20,50)
     t.fd(move_distance)
     print(f"{move_datance}픽셀 이동 완료")
+    
+#도착점까지 전진하는 루프   
+while abs(t.xcor() - 325) > 1 or abs(t.ycor() - 275) > 1:
+    t.fd(10)
+    check_colliision()
+    avoid_obstacle()
+    
+    
+    
+    
+    
     
