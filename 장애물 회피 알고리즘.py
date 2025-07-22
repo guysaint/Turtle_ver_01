@@ -25,8 +25,12 @@ t.penup()
 # 장애물 그리기
 t.goto(-30,-15)
 t.pendown()
+t.fillcolor("orange")
+t.begin_fill()
 for i in range(3):
     t.fd(50)
     t.lt(120)
+t.end_fill()
+t.color("skyblue")
 t.penup()
 t.goto(-300,-270)
