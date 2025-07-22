@@ -34,3 +34,7 @@ t.end_fill()
 t.color("skyblue")
 t.penup()
 t.goto(-300,-270)
+
+# 시작점에서 도착점으로 이동하기
+t.pendown()
+t.goto(325,275)
