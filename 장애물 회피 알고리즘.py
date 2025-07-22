@@ -6,6 +6,7 @@ s = turtle.getscreen()
 t = turtle.Turtle()
 t.color("skyblue")
 t.shape("turtle")
+t.shapesize(1.5,1.5,1.5)
 
 #시작 점 그리기
 t.penup()
@@ -53,9 +54,19 @@ def cal_distance(x1, y1, x2, y2):
 print(f"시작점과 도착점까지의 거리: {cal_distance(-300,-270,325,275)}")
 
 
-#거북이의 위치 값 지정
-x1 = t.xcor()
-y1 = t.ycor()
+
+
+#장애물과의 충돌 판정
+
 
 #거북이와 장애물까지의 거리 계산
 print(f"시작점과 장애물까지의 거리:{cal_distance(x1,y1, 0, 0)}")
+
+#장애물 회피 알고리즘
+#장애물의 중심점은 (0,0) 반지름은 25
+def check_collision():
+    #거북이의 실시간 위치 값 지정
+    x1 = t.xcor()
+    y1 = t.ycor()
+    # 장애물과의 거리를 확인
+     
