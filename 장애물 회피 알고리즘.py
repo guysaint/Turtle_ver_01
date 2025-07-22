@@ -1,5 +1,5 @@
 import turtle
-
+import math
 # 스크린 생성
 s = turtle.getscreen()
 #거북이 변수에 지정, 거북이 초기 설정
@@ -43,3 +43,11 @@ t.fd(20)
 t.rt(30)
 t.fd(50)
 t.goto(325,275)
+
+# 시작점과 도착점의 거리를 계산하는 함수
+def cal_distance(x1, y1, x2, y2):
+    # 두 점 사이의 거리를 계산
+    distance = math.sqrt((x2-x1)**2+(y2-y1)**2)
+    return distance
+    
+print(f"시작점과 도착점까지의 거리: {cal_distance(-300,-270,325,275)}")
