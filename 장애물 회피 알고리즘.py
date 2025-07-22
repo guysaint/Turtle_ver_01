@@ -6,3 +6,18 @@ s = turtle.getscreen()
 t = turtle.Turtle()
 t.color("skyblue")
 t.shape("turtle")
+
+#시작 점 그리기
+t.penup()
+t.goto(-300,-300)
+t.pendown()
+t.circle(30)
+t.penup()
+
+#도착점 그리기
+t.goto(300,300)
+t.pendown()
+for i in range(4):
+    t.fd(50)
+    t.rt(90)
+t.penup()
