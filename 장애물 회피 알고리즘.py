@@ -4,3 +4,5 @@ import turtle
 s = turtle.getscreen()
 #거북이 변수에 지정, 거북이 초기 설정
 t = turtle.Turtle()
+t.color("skyblue")
+t.shape("turtle")
