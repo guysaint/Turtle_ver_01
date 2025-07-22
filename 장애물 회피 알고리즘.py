@@ -52,6 +52,10 @@ def cal_distance(x1, y1, x2, y2):
     
 print(f"시작점과 도착점까지의 거리: {cal_distance(-300,-270,325,275)}")
 
-# 장애물까지의 거리 계산
 
-print(f"시작점과 장애물까지의 거리:{cal_distance(-300,-270, 0, 0)}")
+#거북이의 위치 값 지정
+x1 = t.xcor()
+y1 = t.ycor()
+
+#거북이와 장애물까지의 거리 계산
+print(f"시작점과 장애물까지의 거리:{cal_distance(x1,y1, 0, 0)}")
