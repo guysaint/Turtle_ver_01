@@ -21,3 +21,12 @@ for i in range(4):
     t.fd(50)
     t.rt(90)
 t.penup()
+
+# 장애물 그리기
+t.goto(-30,-15)
+t.pendown()
+for i in range(3):
+    t.fd(50)
+    t.lt(120)
+t.penup()
+t.goto(-300,-270)
