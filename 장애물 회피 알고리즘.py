@@ -35,6 +35,11 @@ t.color("skyblue")
 t.penup()
 t.goto(-300,-270)
 
-# 시작점에서 도착점으로 이동하기
+# 시작점에서 도착점으로 장애물 피해서 이동하기
 t.pendown()
+t.goto(-40, -30)
+t.lt(90)
+t.fd(20)
+t.rt(30)
+t.fd(50)
 t.goto(325,275)
