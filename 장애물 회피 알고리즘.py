@@ -1,5 +1,6 @@
 import turtle
 import math
+import random
 # 스크린 생성
 s = turtle.getscreen()
 #거북이 변수에 지정, 거북이 초기 설정
@@ -7,7 +8,7 @@ t = turtle.Turtle()
 t.color("skyblue")
 t.shape("turtle")
 t.shapesize(1.5,1.5,1.5)
-t.lt(60)
+
 
 #시작 점 그리기
 t.penup()
@@ -86,7 +87,7 @@ def avoid_obstacle():
     #2단계
     direction = random.choice([1,-1]) #1=좌회전, -1=우회전
     
-    if direction ==1:
+    if direction == 1:
         t.lt(turn_angle)
         print(f"좌회전 {turn_angle}도")
         
@@ -97,13 +98,19 @@ def avoid_obstacle():
     #3단계: 회전 후 안전 거리만큼 이동
     move_distance = random.randint(20,50)
     t.fd(move_distance)
-    print(f"{move_datance}픽셀 이동 완료")
+    print(f"{move_distance}픽셀 이동 완료")
     
-#도착점까지 전진하는 루프   
+    if t.pos() == (325, 275):
+        
+    
+#도착점까지 전진하는 루프
+
 while abs(t.xcor() - 325) > 1 or abs(t.ycor() - 275) > 1:
+    t.setheading(t.towards(325, 275))
     t.fd(10)
-    check_colliision()
-    avoid_obstacle()
+    if check_collision():
+        avoid_obstacle()
+    
     
     
     
